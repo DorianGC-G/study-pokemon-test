@@ -30,6 +30,9 @@ gem "jbuilder"
 # Authentication with Devise [https://github.com/heartcombo/devise]
 gem "devise"
 
+# PokeAPI ruby version, to call the api in the seed [https://github.com/rdavid1099/poke-api-v2]
+gem "poke-api-v2"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
