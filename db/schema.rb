@@ -10,9 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_18_085646) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_18_091734) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.boolean "correct_answer"
+    t.string "content"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "content"
+    t.bigint "quizz_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quizz_id"], name: "index_questions_on_quizz_id"
+  end
+
+  create_table "quizzs", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.boolean "passed"
+    t.integer "score"
+    t.bigint "quizz_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quizz_id"], name: "index_results_on_quizz_id"
+    t.index ["user_id"], name: "index_results_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
