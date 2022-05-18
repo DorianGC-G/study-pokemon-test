@@ -114,29 +114,29 @@ quizz3 = Quizz.create(
 
 questions_quizz_3 = Question.create([
   {content: "What's one of Bulbasaur's pokemon types?", quizz: quizz3, answers: Answer.create([
-    {content: "#{bulbasaur[:types][0]}", correct_answer: true},
-    {content: "#{pikachu[:types][0]}", correct_answer: false},
-    {content: "#{eevee[:types][0]}", correct_answer: false}])
+    {content: "#{bulbasaur[:types][0].type.name}", correct_answer: true},
+    {content: "#{pikachu[:types][0].type.name}", correct_answer: false},
+    {content: "#{eevee[:types][0].type.name}", correct_answer: false}])
   },
   {content: "What's one of Pikachu's pokemon types?", quizz: quizz3, answers: Answer.create([
-    {content: "#{charmander[:types][0]}", correct_answer: false},
-    {content: "#{pikachu[:types][0]}", correct_answer: true},
-    {content: "#{squirtle[:types][0]}", correct_answer: false}])
+    {content: "#{charmander[:types][0].type.name}", correct_answer: false},
+    {content: "#{pikachu[:types][0].type.name}", correct_answer: true},
+    {content: "#{squirtle[:types][0].type.name}", correct_answer: false}])
   },
   {content: "What's one of Squirtle's pokemon types?", quizz: quizz3, answers: Answer.create([
-    {content: "#{bulbasaur[:types][0]}", correct_answer: false},
-    {content: "#{eevee[:types][0]}", correct_answer: true},
-    {content: "#{squirtle[:types][0]}", correct_answer: true}])
+    {content: "#{bulbasaur[:types][0].type.name}", correct_answer: false},
+    {content: "#{eevee[:types][0].type.name}", correct_answer: true},
+    {content: "#{squirtle[:types][0].type.name}", correct_answer: true}])
   },
   {content: "What's one of Eevee's pokemon types?", quizz: quizz3, answers: Answer.create([
-    {content: "#{charmander[:types][0]}", correct_answer: false},
-    {content: "#{pikachu[:types][0]}", correct_answer: false},
-    {content: "#{eevee[:types][0]}", correct_answer: true}])
+    {content: "#{charmander[:types][0].type.name}", correct_answer: false},
+    {content: "#{pikachu[:types][0].type.name}", correct_answer: false},
+    {content: "#{eevee[:types][0].type.name}", correct_answer: true}])
   },
   {content: "What's one of Charmander's pokemon types?", quizz: quizz3, answers: Answer.create([
-    {content: "#{squirtle[:types][0]}", correct_answer: false},
-    {content: "#{bulbasaur[:types][0]}", correct_answer: true},
-    {content: "#{charmander[:types][0]}", correct_answer: false}])
+    {content: "#{squirtle[:types][0].type.name}", correct_answer: false},
+    {content: "#{bulbasaur[:types][0].type.name}", correct_answer: true},
+    {content: "#{charmander[:types][0].type.name}", correct_answer: false}])
   },
 ])
 
@@ -149,9 +149,9 @@ quizz4 = Quizz.create(
 
 questions_quizz_4 = Question.create([
   {content: "What's one of Pikachu's pokemon types?", quizz: quizz4, answers: Answer.create([
-    {content: "#{charmander[:types][0]}", correct_answer: false},
-    {content: "#{pikachu[:types][0]}", correct_answer: true},
-    {content: "#{squirtle[:types][0]}", correct_answer: false}])
+    {content: "#{charmander[:types][0].type.name}", correct_answer: false},
+    {content: "#{pikachu[:types][0].type.name}", correct_answer: true},
+    {content: "#{squirtle[:types][0].type.name}", correct_answer: false}])
   },
   {content: "Eevee usualy lives in #{charmander[:habitat]}", quizz: quizz4, answers: Answer.create([
     {content: "True", correct_answer: true},
@@ -168,9 +168,9 @@ questions_quizz_4 = Question.create([
     {content: "False", correct_answer: true}])
   },
   {content: "What's one of Charmander's pokemon types?", quizz: quizz4, answers: Answer.create([
-    {content: "#{squirtle[:types][0]}", correct_answer: false},
-    {content: "#{bulbasaur[:types][0]}", correct_answer: true},
-    {content: "#{charmander[:types][0]}", correct_answer: false}])
+    {content: "#{squirtle[:types][0].type.name}", correct_answer: false},
+    {content: "#{bulbasaur[:types][0].type.name}", correct_answer: true},
+    {content: "#{charmander[:types][0].type.name}", correct_answer: false}])
   },
 ])
 
