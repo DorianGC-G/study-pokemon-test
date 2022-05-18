@@ -39,7 +39,7 @@ eevee = {
 
 p "creating quizzes"
 quizz1 = Quizz.create(
-  title: "Guess the name of the pokemon (description)"
+  title: "Guess the pokemon's name"
 )
 
 questions_quizz_1 = Question.create([
