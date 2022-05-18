@@ -1,7 +1,8 @@
 require "test_helper"
 
 class AnswerTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "Should have a content" do
+    answer = Answer.new
+    assert_not answer.save
+  end
 end

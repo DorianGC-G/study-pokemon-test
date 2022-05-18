@@ -1,7 +1,8 @@
 require "test_helper"
 
 class QuizzTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "Should not save quizz without title" do
+    quizz = Quizz.new
+    assert_not quizz.save
+  end
 end
