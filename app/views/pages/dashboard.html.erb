@@ -4,3 +4,8 @@
 <div class="completed-quizzes">
   <span>You have completed <%= @results.count %> quizzes, for a total score of <%= @total_score %> points.</span>
 </div>
+<div>
+  <%= link_to quizzes_path do %>
+    <span>Check out all our quizzes !</span>
+  <% end %>
+</div>
