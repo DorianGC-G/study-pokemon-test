@@ -1,20 +1,36 @@
-<h2><%= @quizz.title %></h2>
-<span>You need to answer 3 questions correctly to pass the quizz.</span>
-<%= form_with model: @result do |f| %>
-  <%= f.hidden_field :quizz_id, value: @quizz.id %>
-  <% @quizz.questions.each_with_index do |question, i| %>
-    <%= f.label question.content %>
-    <%= f.fields_for :questions do |q| %>
-      <%= q.fields_for "question_#{i}".to_sym do |a| %>
-        <br/>
-        <% question.answers.each do |answer| %>
-          <%= a.radio_button :answer, answer.correct_answer, :required => true %>
-          <%= a.label answer.content %>
-          <br/>
+<div class="content justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-lg-10 col-xl-8 h-50">
+      <h2 class="text-center"><%= @quizz.title %></h2>
+      <h4 class="text-center">You need to answer 3 questions correctly to pass the quizz.</h4>
+      <%= form_with model: @result do |f| %>
+        <%= f.hidden_field :quizz_id, value: @quizz.id %>
+        <% @quizz.questions.each_with_index do |question, i| %>
+          <div class="card text-center my-3">
+            <div class="card-body">
+              <%= f.label question.content, class: "fs-4" %>
+              <%= f.fields_for :questions do |q| %>
+                <%= q.fields_for "question_#{i}".to_sym do |a| %>
+                <div class="row mt-3">
+                  <div class="col-12">
+                    <% question.answers.each do |answer| %>
+                      <%= a.radio_button :answer, answer.correct_answer, :required => true, class: "my-2" %>
+                      <%= a.label answer.content, class: "me-4" %>
+                    <% end %>
+                  </div>
+                </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
         <% end %>
-      <% end%>
-    <% end %>
-  <% end %>
-  <br/>
-  <%= f.submit "Send your answers" %>
-<% end %>
+        <div class="row mt-3">
+          <div class="col-12 text-center">
+            <%= f.submit "Send your answers", class: "btn btn-outline-primary" %>
+            <%= link_to "Back to quizzes", quizzes_path, class: "btn btn-outline-secondary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
