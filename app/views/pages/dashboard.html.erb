@@ -7,6 +7,7 @@
       <div class="row mt-3">
         <div class="col-12 text-center">
           <%= link_to "Check out all our quizzes!", quizzes_path, class: "btn btn-outline-primary" %>
+          <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "btn btn-outline-secondary" %>
         </div>
       </div>
       <h3 class="text-center mt-4"><%= @results.any? ? "Your last attempts:" : "" %></h3>
