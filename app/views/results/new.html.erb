@@ -1,0 +1,17 @@
+<h2><%= @quizz.title %></h2>
+<span>You need to answer 3 questions correctly to pass the quizz.</span>
+<%= form_with model: @result do |f| %>
+  <% @quizz.questions.each_with_index do |question, i| %>
+    <%= f.label question.content %>
+    <%= f.fields_for "question_#{i}".to_sym do |a| %>
+      <br/>
+      <% question.answers.each do |answer| %>
+        <%= a.radio_button :answer, answer.correct_answer %>
+        <%= a.label answer.content %>
+        <br/>
+      <% end %>
+    <% end%>
+  <% end %>
+  <br/>
+  <%= f.submit "Send your answers" %>
+<% end %>

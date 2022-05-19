@@ -14,27 +14,27 @@ p "fetching pokemons"
 bulbasaur = {
   types: PokeApi.get(pokemon: "bulbasaur").types,
   habitat: PokeApi.get(pokemon_species: "bulbasaur").habitat.name,
-  description: PokeApi.get(pokemon_species: "bulbasaur").flavor_text_entries[0].flavor_text
+  description: PokeApi.get(pokemon_species: "bulbasaur").flavor_text_entries[0].flavor_text.gsub(/[[:space:]]/, ' ')
 }
 charmander = {
   types: PokeApi.get(pokemon: "charmander").types,
   habitat: PokeApi.get(pokemon_species: "charmander").habitat.name,
-  description: PokeApi.get(pokemon_species: "charmander").flavor_text_entries[0].flavor_text
+  description: PokeApi.get(pokemon_species: "charmander").flavor_text_entries[0].flavor_text.gsub(/[[:space:]]/, ' ')
 }
 squirtle = {
   types: PokeApi.get(pokemon: "squirtle").types,
   habitat: PokeApi.get(pokemon_species: "squirtle").habitat.name,
-  description: PokeApi.get(pokemon_species: "squirtle").flavor_text_entries[0].flavor_text
+  description: PokeApi.get(pokemon_species: "squirtle").flavor_text_entries[0].flavor_text.gsub(/[[:space:]]/, ' ')
 }
 pikachu = {
   types: PokeApi.get(pokemon: "pikachu").types,
   habitat: PokeApi.get(pokemon_species: "pikachu").habitat.name,
-  description: PokeApi.get(pokemon_species: "pikachu").flavor_text_entries[0].flavor_text
+  description: PokeApi.get(pokemon_species: "pikachu").flavor_text_entries[0].flavor_text.gsub(/[[:space:]]/, ' ')
 }
 eevee = {
   types: PokeApi.get(pokemon: "eevee").types,
   habitat: PokeApi.get(pokemon_species: "eevee").habitat.name,
-  description: PokeApi.get(pokemon_species: "eevee").flavor_text_entries[0].flavor_text
+  description: PokeApi.get(pokemon_species: "eevee").flavor_text_entries[0].flavor_text.gsub(/[[:space:]]/, ' ')
 }
 
 p "creating quizzes"
@@ -43,31 +43,31 @@ quizz1 = Quizz.create(
 )
 
 questions_quizz_1 = Question.create([
-  {content: "Who's that pokemon ? \"#{bulbasaur[:description]}\"", quizz: quizz1, answers: Answer.create([
+  {content: bulbasaur[:description], quizz: quizz1, answers: Answer.create([
     {content: "Bulbasaur", correct_answer: true},
     {content: "Charmander", correct_answer: false},
     {content: "Pikachu", correct_answer: false},
     {content: "Rick Astley", correct_answer: false}])
   },
-  {content: "Who's that pokemon ? \"#{pikachu[:description]}\"", quizz: quizz1, answers: Answer.create([
+  {content: pikachu[:description], quizz: quizz1, answers: Answer.create([
     {content: "General Kenobi", correct_answer: false},
     {content: "Bulbasaur", correct_answer: false},
     {content: "Charmander", correct_answer: false},
     {content: "Pikachu", correct_answer: true}])
   },
-  {content: "Who's that pokemon ? \"#{eevee[:description]}\"", quizz: quizz1, answers: Answer.create([
+  {content: eevee[:description], quizz: quizz1, answers: Answer.create([
     {content: "General Grievous", correct_answer: false},
     {content: "Eevee", correct_answer: true},
     {content: "Pikachu", correct_answer: false},
     {content: "Squirtle", correct_answer: false}])
   },
-  {content: "Who's that pokemon ? \"#{squirtle[:description]}\"", quizz: quizz1, answers: Answer.create([
+  {content: squirtle[:description], quizz: quizz1, answers: Answer.create([
     {content: "Charizard", correct_answer: false},
     {content: "Charmander", correct_answer: false},
     {content: "Squirtle", correct_answer: true},
     {content: "Psykokwak", correct_answer: false}])
   },
-  {content: "Who's that pokemon ? \"#{charmander[:description]}\"", quizz: quizz1, answers: Answer.create([
+  {content: charmander[:description], quizz: quizz1, answers: Answer.create([
     {content: "Charizard", correct_answer: false},
     {content: "Charmander", correct_answer: true},
     {content: "Agumon", correct_answer: false},

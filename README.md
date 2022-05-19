@@ -14,7 +14,7 @@
 ### User
 - [x] A user can log in with a valid username and password through a login screen
 
-- [ ] A user can see a collection of quizzes
+- [x] A user can see a collection of quizzes
 
 - [ ] A user can start a quiz
 
@@ -24,7 +24,7 @@
 
 
 ### Quizz
-- [ ] A quizz has a Title
+- [x] A quizz has a Title
 
 - [ ] A quizz has a maximum of 5 questions
 

@@ -1,3 +1,5 @@
 <% @quizzes.each do |quizz| %>
-  <h2><%= quizz.title %></h2>
+  <%= link_to quizz_result_path(quizz) do %>
+    <h2><%= quizz.title %></h2>
+  <% end %>
 <% end %>
