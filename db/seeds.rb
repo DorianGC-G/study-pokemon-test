@@ -81,23 +81,23 @@ p "quizz 1 created"
 quizz2 = Quizz.create(
   title: "Pokemon habitats",
   questions: Question.create([
-    {content: "Bulbasaur usualy lives in #{bulbasaur[:habitat]}", quizz: quizz2, answers: Answer.create([
+    {content: "Bulbasaur usually lives in #{bulbasaur[:habitat]}", quizz: quizz2, answers: Answer.create([
       {content: "True", correct_answer: true},
       {content: "False", correct_answer: false}])
     },
-    {content: "Pikachu usualy lives in #{eevee[:habitat]}", quizz: quizz2, answers: Answer.create([
+    {content: "Pikachu usually lives in #{eevee[:habitat]}", quizz: quizz2, answers: Answer.create([
       {content: "True", correct_answer: false},
       {content: "False", correct_answer: true}])
     },
-    {content: "Squirtle usualy lives in #{bulbasaur[:habitat]}", quizz: quizz2, answers: Answer.create([
+    {content: "Squirtle usually lives in #{bulbasaur[:habitat]}", quizz: quizz2, answers: Answer.create([
       {content: "True", correct_answer: false},
       {content: "False", correct_answer: true}])
     },
-    {content: "Charmander usualy lives in #{charmander[:habitat]}", quizz: quizz2, answers: Answer.create([
+    {content: "Charmander usually lives in #{charmander[:habitat]}", quizz: quizz2, answers: Answer.create([
       {content: "True", correct_answer: true},
       {content: "False", correct_answer: false}])
     },
-    {content: "Eevee usualy lives in #{eevee[:habitat]}", quizz: quizz2, answers: Answer.create([
+    {content: "Eevee usually lives in #{eevee[:habitat]}", quizz: quizz2, answers: Answer.create([
       {content: "True", correct_answer: true},
       {content: "False", correct_answer: false}])
     },
@@ -149,9 +149,9 @@ quizz4 = Quizz.create(
       {content: "#{pikachu[:types][0].type.name}", correct_answer: true},
       {content: "#{squirtle[:types][0].type.name}", correct_answer: false}])
     },
-    {content: "Eevee usualy lives in #{charmander[:habitat]}", quizz: quizz4, answers: Answer.create([
-      {content: "True", correct_answer: true},
-      {content: "False", correct_answer: false}])
+    {content: "Eevee usually lives in #{charmander[:habitat]}", quizz: quizz4, answers: Answer.create([
+      {content: "True", correct_answer: false},
+      {content: "False", correct_answer: true}])
     },
     {content: charmander[:description], quizz: quizz4, answers: Answer.create([
       {content: "Charizard", correct_answer: false},
@@ -159,14 +159,14 @@ quizz4 = Quizz.create(
       {content: "Agumon", correct_answer: false},
       {content: "Muk", correct_answer: false}])
     },
-    {content: "Pikachu usualy lives in #{eevee[:habitat]}", quizz: quizz4, answers: Answer.create([
+    {content: "Pikachu usually lives in #{eevee[:habitat]}", quizz: quizz4, answers: Answer.create([
       {content: "True", correct_answer: false},
       {content: "False", correct_answer: true}])
     },
     {content: "What's one of Charmander's pokemon types?", quizz: quizz4, answers: Answer.create([
       {content: "#{squirtle[:types][0].type.name}", correct_answer: false},
-      {content: "#{bulbasaur[:types][0].type.name}", correct_answer: true},
-      {content: "#{charmander[:types][0].type.name}", correct_answer: false}])
+      {content: "#{bulbasaur[:types][0].type.name}", correct_answer: false},
+      {content: "#{charmander[:types][0].type.name}", correct_answer: true}])
     },
   ])
 )
