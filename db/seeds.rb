@@ -99,7 +99,7 @@ questions_quizz_2 = Question.create([
     {content: "True", correct_answer: true},
     {content: "False", correct_answer: false}])
   },
-  {content: "Eevee usualy lives in #{charmander[:habitat]}", quizz: quizz2, answers: Answer.create([
+  {content: "Eevee usualy lives in #{eevee[:habitat]}", quizz: quizz2, answers: Answer.create([
     {content: "True", correct_answer: true},
     {content: "False", correct_answer: false}])
   },
@@ -157,7 +157,7 @@ questions_quizz_4 = Question.create([
     {content: "True", correct_answer: true},
     {content: "False", correct_answer: false}])
   },
-  {content: "Who's that pokemon ? \"#{charmander[:description]}\"", quizz: quizz4, answers: Answer.create([
+  {content: charmander[:description], quizz: quizz4, answers: Answer.create([
     {content: "Charizard", correct_answer: false},
     {content: "Charmander", correct_answer: true},
     {content: "Agumon", correct_answer: false},
