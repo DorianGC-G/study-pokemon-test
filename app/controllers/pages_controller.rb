@@ -3,6 +3,7 @@ class PagesController < ApplicationController
     @user = current_user
     @results = Result.where(user: current_user)
     @total_score = display_total_score(@results)
+    @total_wins = @results.where(passed: true).count
   end
 
   private

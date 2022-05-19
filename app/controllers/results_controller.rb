@@ -10,7 +10,11 @@ class ResultsController < ApplicationController
     score = calculate_score()
     @result = Result.new(user: user, quizz: quizz, score: score, passed: score >= 3)
     @result.save
-    redirect_to quizzes_path
+    redirect_to result_show_path(@result)
+  end
+
+  def show
+    @result = Result.find(params[:id])
   end
 
   private

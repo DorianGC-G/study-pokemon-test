@@ -1,0 +1,4 @@
+<h2><%= @result.passed ? "Congrats !" : "Woops..." %></h2>
+<span>You <%= @result.passed ? "passed" : "failed" %> the quizz, with a score of <%= @result.score %> points out of 5.</span><br/>
+<%= link_to "Go back to all quizzes", quizzes_path %>
+<%= link_to "Back to your dashboard", root_path %>

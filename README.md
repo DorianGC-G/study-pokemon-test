@@ -16,24 +16,24 @@
 
 - [x] A user can see a collection of quizzes
 
-- [ ] A user can start a quiz
+- [x] A user can start a quiz
 
-- [ ] A user can answer 5 questions on a quiz
+- [x] A user can answer 5 questions on a quiz
 
-- [ ] A user can see the scores of his quizzes
+- [x] A user can see the scores of his quizzes
 
 
 ### Quizz
 - [x] A quizz has a Title
 
-- [ ] A quizz has a maximum of 5 questions
+- [x] A quizz has a maximum of 5 questions
 
-- [ ] A quizz is considered passed if +60% of questions are answered correctly
+- [x] A quizz is considered passed if +60% of questions are answered correctly
 
 ### Question
-- [ ] A question has a maximum of 4 answers
+- [x] A question has a maximum of 4 answers
 
-- [ ] A question has only 1 possible correct answer
+- [x] A question has only 1 possible correct answer
 
 
 ## Bonus

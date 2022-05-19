@@ -2,10 +2,15 @@
 <h2>Welcome !</h2>
 
 <div class="completed-quizzes">
-  <span>You have completed <%= @results.count %> quizzes, for a total score of <%= @total_score %> points.</span>
+  <span>You have attempted <%= @results.length %> quizzes, for a total score of <%= @total_score %> points.</span><br/>
+  <span>You have passed <%= @total_wins %> of them.</span>
 </div>
 <div>
   <%= link_to quizzes_path do %>
     <span>Check out all our quizzes !</span>
   <% end %>
 </div>
+<h3><%= @results.any? ? "Your last attempts:" : "" %></h3>
+<% @results.each do |result| %>
+  <%= render '_shared/result_details', result: result %>
+<% end %>
