@@ -4,6 +4,7 @@ class ResultsController < ApplicationController
     @quizz = Quizz.find(params[:id])
   end
 
+  # The results are created using the params passed in the form in results/new view
   def create
     user = current_user
     quizz = Quizz.find(params[:result][:quizz_id].to_i)
@@ -23,6 +24,7 @@ class ResultsController < ApplicationController
     params.require(:result).permit(:result)
   end
 
+  # The score is calculated based on the correct answers passed in the form
   def calculate_score
     score = 0
     params[:result][:questions].each { |key, value| score += 1 if value[:answer] == "true" }
