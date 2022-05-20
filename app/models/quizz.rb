@@ -1,8 +1,8 @@
 class Quizz < ApplicationRecord
-  has_many :questions, dependent: :delete_all
-  has_many :results, dependent: :delete_all
+  has_many :questions, dependent: :destroy
+  has_many :results, dependent: :destroy
   
   validates :title, presence: true
-  validates :questions, length: { minimum: 5, maximum: 5 }
+  validates :questions, length: { is: 5 }
 end
  

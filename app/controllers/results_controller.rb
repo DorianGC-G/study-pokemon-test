@@ -7,7 +7,7 @@ class ResultsController < ApplicationController
   # The results are created using the params passed in the form in results/new view
   def create
     user = current_user
-    quizz = Quizz.find(params[:result][:quizz_id].to_i)
+    quizz = Quizz.find(params[:result][:quizz_id])
     score = calculate_score()
     @result = Result.new(user: user, quizz: quizz, score: score, passed: score >= 3)
     @result.save
